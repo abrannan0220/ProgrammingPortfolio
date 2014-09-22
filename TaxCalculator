@@ -1,0 +1,28 @@
+Module Module1
+    Dim purchaseAmount As Integer = "0"
+    Dim stateTax As Integer = "0.04 * purchaseAmount"
+    Dim countryTax As Integer = "0.02 * purchaseAmount"
+    Dim totalTax As Integer = "stateTax + countryTax"
+    Dim totalSale As Integer = "totalTax + purchaseAmount"
+
+    Sub calcTotals()
+        stateTax = purchaseAmount * 0.04
+        countryTax = purchaseAmount * 0.02
+        totalTax = stateTax + countryTax
+        totalSale = purchaseAmount + totalTax
+    End Sub
+
+
+    Sub Main()
+        Console.WriteLine("Welcome to the Tax Master")
+        Console.WriteLine("What is the amount of your purchase?")
+        Console.ReadLine()
+        purchaseAmount = Console.ReadLine
+
+        Call calcTotals()
+
+        Console.WriteLine("Your purchase of " & purchaseAmount & "resulted in a State Tax of " & stateTax & ", a Country Tax of " & countryTax & ", which brings your tax total to " & totalTax & ", making your total sale the amount of " & totalSale & ".")
+        Console.WriteLine("Thank you. Come Again!")
+    End Sub
+
+End Module
