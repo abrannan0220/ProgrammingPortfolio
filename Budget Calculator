@@ -1,0 +1,15 @@
+Declare integer as budgetAmount
+Declare integer as expenseAmount
+Declare integer as budgetDifference
+Declare string as keepGoing
+
+DO
+	Display "Welcome to your Budget Program, Please Enter Total Budget."
+		Input budgetAmount
+	Display "Please Enter Expense Item Amount"
+		Input expenseAmount
+		budgetDifference = budgetAmount - expenseAmount
+	Display "Your Total Budget is now" , totalBudget , ". Would you like to continue?"
+		Input keepGoing
+While keepGoing == "Y"
+Run DO
