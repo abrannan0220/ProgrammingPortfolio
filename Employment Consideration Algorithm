@@ -1,0 +1,59 @@
+Module Main()
+
+Declare Integer testScore = 0
+Declare String category = ""
+Declare String interview = ""
+
+Display "Welcome to the Test Score Program"
+
+Call getScore(ByRef testScore)
+Call employCat(testScore, category)
+Call interviewPoss(testScore, interview)
+Call displayInfo(testScore, Category, interview)
+
+End Main
+
+Module getScore(ByRef int testScore)
+
+	Display "Please enter Test Score"
+	Input testScore
+	
+End getScore
+
+
+
+Module employCat(ByVal int testScore, ByRef string category)
+	If testScore <= 59 Then
+		category = "NO"
+	Else if testScore <= 69 Then
+		category = "Maybe"
+	Else if testScore <= 84 Then
+		category = "Likely"
+	Else if testScore >= 85
+		category = "Definite"
+	Else
+		Display "Invalid Entry"
+End employCat
+
+
+Module interviewPoss(ByVal int testScore, ByRef string interview)
+	If testScore <= 59 Then
+		interview = "NO"
+	Else if testScore <= 69 Then
+		interview = "Yes"
+	Else if testScore <= 84 Then
+		interview = "Yes"
+	Else if testScore >= 85
+		interview = "Yes"
+	Else
+		Display "Invalid Entry"
+		
+	If testScore >= 60 then
+		interview = "YES!"
+End interviewPoss
+
+
+
+Module displayInfo(ByVal int testScore, ByVal string category, ByVal string interview)
+	Display "For your Test Score of ", testScore, ", the Employment Category is  ", employCat, ", and the Interview Possibility is ", interviewPoss, "."
+End displayInfo
